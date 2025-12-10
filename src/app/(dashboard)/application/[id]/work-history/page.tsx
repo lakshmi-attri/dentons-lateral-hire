@@ -48,7 +48,7 @@ import { WizardNavigation } from "@/components/application/wizard-navigation";
 import { workHistorySchema, type WorkHistoryFormData } from "@/lib/schemas/lcq/work-history";
 import { useLCQStore } from "@/stores/lcq-store";
 import { useAuthStore } from "@/stores/auth-store";
-import type { PartnerType, WorkPosition } from "@/types/lcq";
+import type { PartnerType, WorkPosition, WorkHistoryData } from "@/types/lcq";
 import { getNextStep, getPreviousStep } from "@/lib/navigation-helper";
 
 const partnerTypes: { value: PartnerType; label: string }[] = [
@@ -94,7 +94,7 @@ export default function WorkHistoryPage() {
     reasonForLeaving: "",
   });
 
-  const form = useForm<WorkHistoryFormData>({
+  const form = useForm({
     resolver: zodResolver(workHistorySchema),
     defaultValues: {
       currentPosition: {
@@ -180,7 +180,7 @@ export default function WorkHistoryPage() {
       updateWorkHistory({
         ...data,
         priorPositions,
-      });
+      } as Partial<WorkHistoryData>);
     }
     return isValid;
   };

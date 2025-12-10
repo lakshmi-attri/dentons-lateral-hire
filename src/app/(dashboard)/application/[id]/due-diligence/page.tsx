@@ -138,6 +138,8 @@ export default function DueDiligencePage() {
     performedLegalServices: false,
     anticipatePerformingLegalServices: false,
     anticipateClientOfDentons: false,
+    willPerformAtDentons: false,
+    willBeDentonsClient: false,
     receiveCompensation: false,
     compensationDetails: "",
   });
@@ -168,6 +170,8 @@ export default function DueDiligencePage() {
         performedLegalServices: false,
         anticipatePerformingLegalServices: false,
         anticipateClientOfDentons: false,
+        willPerformAtDentons: false,
+        willBeDentonsClient: false,
         receiveCompensation: false,
         compensationDetails: "",
       });

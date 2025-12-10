@@ -53,7 +53,7 @@ export default function ContactPage() {
     }
   }, [user, applicationId, loadApplication, router]);
 
-  const form = useForm<ContactFormData>({
+  const form = useForm({
     resolver: zodResolver(contactSchema),
     defaultValues: {
       legalFirstName: contactInfo.legalFirstName || "",
