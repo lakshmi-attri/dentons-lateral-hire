@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/layout/logo";
-import { Shield, Lock, FileLock, Users, CheckCircle } from "lucide-react";
+import { Shield, FileLock, Users } from "lucide-react";
 
 export default function LandingPage() {
   return (
@@ -65,12 +65,6 @@ export default function LandingPage() {
                 <Users className="h-5 w-5 text-primary" />
                 <span className="text-base font-normal leading-normal">
                   Access Control
-                </span>
-              </div>
-              <div className="flex items-center gap-2 text-[#7c6b80]">
-                <CheckCircle className="h-5 w-5 text-primary" />
-                <span className="text-base font-normal leading-normal">
-                  GDPR Compliant
                 </span>
               </div>
             </div>
